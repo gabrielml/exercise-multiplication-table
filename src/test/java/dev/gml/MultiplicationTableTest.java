@@ -66,16 +66,16 @@ public class MultiplicationTableTest {
         // A multiplication table instance, a number, and the expected string output.
         MultiplicationTable table = new MultiplicationTable();
         int number = 2;
-        String expectedOutput = "2 x 1 = 2\n" +
-            "2 x 2 = 4\n" +
-            "2 x 3 = 6\n" +
-            "2 x 4 = 8\n" +
-            "2 x 5 = 10\n" +
-            "2 x 6 = 12\n" +
-            "2 x 7 = 14\n" +
-            "2 x 8 = 16\n" +
-            "2 x 9 = 18\n" +
-            "2 x 10 = 20\n";
+        String expectedOutput = "2 x 1 = 2" + System.lineSeparator() +
+                "2 x 2 = 4" + System.lineSeparator() +
+                "2 x 3 = 6" + System.lineSeparator() +
+                "2 x 4 = 8" + System.lineSeparator() +
+                "2 x 5 = 10" + System.lineSeparator() +
+                "2 x 6 = 12" + System.lineSeparator() +
+                "2 x 7 = 14" + System.lineSeparator() +
+                "2 x 8 = 16" + System.lineSeparator() +
+                "2 x 9 = 18" + System.lineSeparator() +
+                "2 x 10 = 20" + System.lineSeparator();
 
         // --- When ---
         // The 'generateTableString' method is called.
