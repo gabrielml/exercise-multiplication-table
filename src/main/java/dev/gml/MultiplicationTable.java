@@ -8,6 +8,8 @@ package dev.gml;
  * A class that generates and prints a multiplication table for a given integer.
  */
 public class MultiplicationTable {
+    // --- ATTRIBUTES (aka fields) ---
+    private static final int MULTIPLICATION_LIMIT = 10;
 
     // --- METHODS ---
     /**
@@ -20,7 +22,7 @@ public class MultiplicationTable {
     public void printTable(int number) {
         StringBuilder output = new StringBuilder();
 
-        for (int index = 1; index <= 10; index++) {
+        for (int index = 1; index <= MULTIPLICATION_LIMIT; index++) {
             int result = number * index;
 
             output.append(number).append(" x ").append(index).append(" = ").append(result)
