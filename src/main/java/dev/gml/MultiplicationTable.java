@@ -32,7 +32,7 @@ public class MultiplicationTable {
      * @param number The integer for which to generate the multiplication table.
      * @return A string containing the formatted multiplication table.
      */
-    public String generateTableString(int number) {
+    private String generateTableString(int number) {
         StringBuilder output = new StringBuilder();
 
         for (int index = 1; index <= MULTIPLICATION_LIMIT; index++) {
