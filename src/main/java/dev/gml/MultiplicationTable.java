@@ -20,19 +20,11 @@ public class MultiplicationTable {
      * @param number The integer for which to generate the multiplication table.
      */
     public void printTable(int number) {
-        // TODO: Update method to call the new method 'generateTableString' and print its result.
-        StringBuilder output = new StringBuilder();
-
-        for (int index = 1; index <= MULTIPLICATION_LIMIT; index++) {
-            int result = number * index;
-
-            output.append(number).append(" x ").append(index).append(" = ").append(result)
-                    .append(System.lineSeparator());
-        }
-        System.out.print(output);
+        System.out.print(generateTableString(number));
     }
 
-    // TODO: Make 'generateTableString' a private method to improve ENCAPSULATION & INTEGRITY.
+    // TODO: Make 'generateTableString' a private method to improve ENCAPSULATION &
+    // INTEGRITY.
     /**
      * Generates the multiplication table for a given number as a single string.
      * Each line is separated by the 'system's line separator'.
@@ -46,7 +38,8 @@ public class MultiplicationTable {
         for (int index = 1; index <= MULTIPLICATION_LIMIT; index++) {
             int result = number * index;
 
-            output.append(number).append(" x ").append(index).append(" = ").append(result).append(System.lineSeparator());
+            output.append(number).append(" x ").append(index).append(" = ").append(result)
+                    .append(System.lineSeparator());
         }
 
         return output.toString();
