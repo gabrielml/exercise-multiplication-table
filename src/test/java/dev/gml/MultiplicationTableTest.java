@@ -1,3 +1,7 @@
+/**
+ * @file This is the 'test class' where I will verify my logic.
+ * @author gml <kickAssDeveloper@hugsForMyBugs.mock>
+ */
 package dev.gml;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,6 +13,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Test suit for the {@link MultiplicationTable} class, ensuring its
+ * functionality behaves as expected.
+ */
 public class MultiplicationTableTest {
     // ATTRIBUTES (aka fields)
     // Captures output sent to the console.
