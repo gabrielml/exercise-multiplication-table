@@ -16,7 +16,7 @@ public class MultiplicationTable {
      * Prints the multiplication table for a given number from 1 to 10.
      * The output is printed to the console in the format:
      * "number x index = result".
-     * 
+     *
      * @param number The integer for which to generate the multiplication table.
      */
     public void printTable(int number) {
@@ -30,4 +30,17 @@ public class MultiplicationTable {
         }
         System.out.print(output);
     }
+
+    public String generateTableString(int number) {
+        StringBuilder output = new StringBuilder();
+
+        for (int index = 1; index <= MULTIPLICATION_LIMIT; index++) {
+            int result = number * index;
+
+            output.append(number).append(" x ").append(index).append(" = ").append(result).append(System.lineSeparator());
+        }
+
+        return output.toString();
+    }
+
 }
