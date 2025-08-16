@@ -48,6 +48,6 @@ public class MultiplicationTableTest {
         // --- Then ---
         // I confirm that the actual console output is the same as the expected console
         // output.
-        assertEquals(expectedOutput, outputStreamCaptor.toString());
+        assertEquals(expectedOutput, outputStreamCaptor.toString().replace("\r", ""));
     }
 }
