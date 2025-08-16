@@ -38,16 +38,16 @@ public class MultiplicationTableTest {
         // output.
         MultiplicationTable table = new MultiplicationTable();
         int number = 5;
-        String expectedOutput = "5 x 1 = 5\n" +
-                "5 x 2 = 10\n" +
-                "5 x 3 = 15\n" +
-                "5 x 4 = 20\n" +
-                "5 x 5 = 25\n" +
-                "5 x 6 = 30\n" +
-                "5 x 7 = 35\n" +
-                "5 x 8 = 40\n" +
-                "5 x 9 = 45\n" +
-                "5 x 10 = 50\n";
+        String expectedOutput = "5 x 1 = 5" + System.lineSeparator() +
+                "5 x 2 = 10" + System.lineSeparator() +
+                "5 x 3 = 15" + System.lineSeparator() +
+                "5 x 4 = 20" + System.lineSeparator() +
+                "5 x 5 = 25" + System.lineSeparator() +
+                "5 x 6 = 30" + System.lineSeparator() +
+                "5 x 7 = 35" + System.lineSeparator() +
+                "5 x 8 = 40" + System.lineSeparator() +
+                "5 x 9 = 45" + System.lineSeparator() +
+                "5 x 10 = 50" + System.lineSeparator();
 
         // --- When ---
         // I call the multiplication table by 5 to be printed on the console.
@@ -56,7 +56,7 @@ public class MultiplicationTableTest {
         // --- Then ---
         // I confirm that the actual console output is the same as the expected console
         // output.
-        assertEquals(expectedOutput, outputStreamCaptor.toString().replace("\r", ""));
+        assertEquals(expectedOutput, outputStreamCaptor.toString());
     }
 
     @Test
