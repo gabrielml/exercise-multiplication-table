@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -22,20 +21,13 @@ import org.junit.jupiter.params.provider.MethodSource;
  * functionality behaves as expected.
  */
 public class MultiplicationTableTest {
-    // ATTRIBUTES (aka fields)
-    // Captures output sent to the console.
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
-    // METHODS
     @BeforeEach
     public void setUp() {
-        // It redirects 'System.out' to 'outputStreamCaptor', so I can capture
-        // everything that is printed
         System.setOut(new PrintStream(outputStreamCaptor));
     }
 
-    // Add 'Parameterized Test': It allows to run the same test method with
-    // different inputs.
     private static Stream<Arguments> provideMultiplicationTableData() {
         String lineSeparator = System.lineSeparator();
 
@@ -66,19 +58,10 @@ public class MultiplicationTableTest {
     @MethodSource("provideMultiplicationTableData")
     @DisplayName("1. It should print the multiplication table by five.")
     void testPrintTable(int number, String expectedOutput) {
-        // --- Given ---
-        // A selected number and the expected console output. (both are now pass as
-        // arguments!)
-        // A multiplication table:
         MultiplicationTable table = new MultiplicationTable();
 
-        // --- When ---
-        // I call the multiplication table by 5 to be printed on the console.
         table.printTable(number);
 
-        // --- Then ---
-        // I confirm that the actual console output is the same as the expected console
-        // output.
         assertEquals(expectedOutput, outputStreamCaptor.toString());
     }
 
