@@ -79,8 +79,11 @@ public class MultiplicationTableTest {
 
         // --- When ---
         // The 'generateTableString' method is called.
-        String actualOutput = table.generateTableString(number);
-
+        // (!) Add 'Java Reflection' to call the private method.
+        java.lang.reflect.Method method = MultiplicationTable.class.getDeclaredMethod("generateTableString", int.class);
+        method.setAccessible(true);
+        String actualOutput = (String) method.invoke(table, number);
+        
         // --- Then ---
         // I confirm that the actual string output is the same as the expected string.
         assertEquals(expectedOutput, actualOutput);
