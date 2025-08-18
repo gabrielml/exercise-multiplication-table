@@ -37,16 +37,6 @@ This exercise includes:
 
 * **Code Coverage**: Using tools like [JaCoCo](https://en.wikipedia.org/wiki/Java_code_coverage_tools) to measure the percentage of code that is executed by tests, which helps ensure high-quality and reliable code.
 
-## 🗺️ **How to Use**
-
-This project is built with Maven, which handles all dependencies. To run the tests and generate the code coverage report, simply execute the following command in your terminal:
-
-```shell
-mvn clean verify
-```
-
-This will compile the code, run all unit tests, and produce a [JaCoCo](https://en.wikipedia.org/wiki/Java_code_coverage_tools) coverage report in the ```target/site/jacoco``` directory, named ```index.html```.
-
 ## 📝 **Class Diagrams**
 
 Here is a class diagram for the MultiplicationTable class and its test suite.
@@ -66,6 +56,16 @@ classDiagram
     }
     MultiplicationTableTest --> MultiplicationTable : tests
 ```
+
+## 🗺️ **How to Use**
+
+This project is built with Maven, which handles all dependencies. To run the tests and generate the code coverage report, simply execute the following command in your terminal:
+
+```shell
+mvn clean verify
+```
+
+This will compile the code, run all unit tests, and produce a [JaCoCo](https://en.wikipedia.org/wiki/Java_code_coverage_tools) coverage report in the ```target/site/jacoco``` directory, named ```index.html```.
 
 ## ✅ TDD Coverage
 
